@@ -1,7 +1,7 @@
 import { useState } from 'react' 
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import boozyTuneCard from '../../components/boozyTuneCard/boozyTuneCard';
+import BoozyTuneCard from '../../components/BoozyTuneCard/BoozyTuneCard';
 
 
 const MyPageDetails = ({user}) => {
