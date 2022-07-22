@@ -1,25 +1,71 @@
 .editContainer {
-  width: 400px;
-  padding: 30px;
+  width: 100vw;
+  height: 100%;
+  padding: 0 15.8px 0 0;
+  /* padding: 30px; */
   background-color: rgba(82, 78, 78, 0.65);
-  display: block;
-  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items:center;
+  /* margin-left: auto;
   margin-right: auto;
   position: relative;
-  top: 70px;
+  top: 70px; */
   color:white;
   font-weight: bold;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.formBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.dropdownContainerDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputHolder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .txt {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+.songContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.inputContainerDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .inputContainer {
-  float: right;
-  /* border-radius: 5px;
-  margin-left: 30px;
-  background-color:  rgba(255, 255, 255, 0.404);
-  border: none;
-  height: 30px; */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

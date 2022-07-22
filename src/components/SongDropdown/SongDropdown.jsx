@@ -1,7 +1,9 @@
+import styles from '../../pages/EditProfile/EditProfile.module.css'
 const SongDropdown = (props) => {
   return ( 
     props.songs.length &&
-    <select onChange={props.onChange} name="favoriteSong">
+    <div className={styles.songContainer}>
+    <select onChange={props.onChange} name="favoriteSong" className={styles.inputContainer}>
       <option></option>
       {props.songs.map((song, idx) => (
         <option key={idx} value={song._id}>
@@ -9,6 +11,7 @@ const SongDropdown = (props) => {
         </option>
       ))}
   </select>
+  </div>
   );
 }
 

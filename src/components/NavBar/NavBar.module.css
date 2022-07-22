@@ -1,3 +1,10 @@
+.navHolder {
+  width: 100vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 header {
   background-color: rgba(82, 78, 78, 0.65);
   padding: 15px;
@@ -21,6 +28,13 @@ a {
 a:hover {
   color: #e7ba73
 }
+.navLengths {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .navul {
   display: flex;
   text-align: center;
@@ -39,13 +53,17 @@ a:hover {
 
 }
 .navbar {
+  width: 100%;
   text-align: center;
 }
-hr {
+.topHalf {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom: 1px solid white;
+  padding: 0 0 20px 0;
 }
+/* hr {
+  width: 100%;
+} */
 .logo {
   width: 20%;
 }

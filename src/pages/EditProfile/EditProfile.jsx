@@ -30,23 +30,28 @@ const EditProfile = props => {
     return !(formData.name)}
   return (
     <div className={styles.editContainer}>
+      <div className={styles.formContainer}>
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
-        className={styles.container}
+        className={styles.formBody}
       >
-        <div className={styles.inputContainer}>
-          <label className={styles.txt} htmlFor="name">Name:</label><input type="text" autoComplete="off" id="name" value={formData.name}name="name" onChange={handleChange}/>
+        <div className={styles.inputHolder}>
+        <div className={styles.inputContainerDiv}>
+          <label className={styles.txt} htmlFor="name">Name:</label>
+          <input type="text" autoComplete="off" id="name" value={formData.name}name="name" onChange={handleChange}
+          className={styles.inputContainer}/>
         </div>
-        <div className={styles.inputContainer}>
+        <div className={styles.inputContainerDiv}>
           <label className={styles.txt} htmlFor="favorite-song">Favorite Song:</label>
           <SongDropdown songs={props.songs} onChange={handleChange} />
         </div>
-        <div className={styles.inputContainer}>
+        <div className={styles.dropdownContainerDiv}>
           <label className={styles.txt} htmlFor="favorite-drink">Favorite Drink:</label>
           <DrinkDropdown drinks={props.drinks} onChange={handleChange} />
         </div>
-        <div className={styles.inputContainer}>
+        </div>
+        <div className={styles.dropdownContainer}>
           <button disabled={isFormInvalid()} className={styles.button}>
             Edit Profile
           </button>
@@ -55,6 +60,7 @@ const EditProfile = props => {
           </Link>
         </div>
       </form>
+      </div>
     </div>
   )
 }

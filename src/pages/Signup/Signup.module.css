@@ -3,6 +3,7 @@ body {
   background-size: cover; 
   background-attachment: fixed;
   background-color:#525252;
+  width: 100vw;
 }
 
 .container {
