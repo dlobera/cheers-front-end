@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import styles from '../../components/SignupForm/SignupForm.module.css'
 import DrinkDropdown from "../../components/DrinkDropdown/DrinkDropdown"
 import SongDropdown from '../../components/SongDropdown/SongDropdown'
+import styles from './EditProfile.module.css'
 
 
 const EditProfile = props => {  
@@ -29,29 +29,21 @@ const EditProfile = props => {
   const isFormInvalid = () => {
     return !(formData.name)}
   return (
-    <>
+    <div className={styles.editContainer}>
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
         className={styles.container}
       >
         <div className={styles.inputContainer}>
-          <label htmlFor="name" className={styles.label}>Name:</label>
-          <input
-            type="text"
-            autoComplete="off"
-            id="name"
-            value={formData.name}
-            name="name"
-            onChange={handleChange}
-          />
+          <label className={styles.txt} htmlFor="name">Name:</label><input type="text" autoComplete="off" id="name" value={formData.name}name="name" onChange={handleChange}/>
         </div>
         <div className={styles.inputContainer}>
-          <label htmlFor="favorite-song" className={styles.label}>Favorite Song:</label>
+          <label className={styles.txt} htmlFor="favorite-song">Favorite Song:</label>
           <SongDropdown songs={props.songs} onChange={handleChange} />
         </div>
         <div className={styles.inputContainer}>
-          <label htmlFor="favorite-drink" className={styles.label}>Favorite Drink:</label>
+          <label className={styles.txt} htmlFor="favorite-drink">Favorite Drink:</label>
           <DrinkDropdown drinks={props.drinks} onChange={handleChange} />
         </div>
         <div className={styles.inputContainer}>
@@ -63,7 +55,7 @@ const EditProfile = props => {
           </Link>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 
